@@ -30,8 +30,8 @@ C'est donc un outil très utile pour une première visualisation du type et de l
 Quand nous découvrons un jeu de données il est <ins>très important de vérifier</ins> dès le départ qu'il **n'y ait pas de doublons** afin d'éviter des erreurs dans les calcules statistiques.
 <ins>La présence de doublons</ins> se vérifie à l'aide de la méthode **duplicated** d'un DataFrame (DF.duplicated()), qui nous dit pour chaque ligne si elle est un doublon (boolean).
 - nous pouvons lui appliquer la méthode **sum** pour <ins>compter le nombre de doublons</ins> : **df.duplicated().sum()**
-- La méthode d'un DataFrame permettant de supprimer les doublons est **drop_duplicates** et sa syntaxe est : **drop_duplicates(subset, keep, inplace)**
-- 
+- La méthode d'un DataFrame permettant de supprimer les doublons est **drop_duplicates** et sa syntaxe est : **drop_duplicates(subset = ['col_spécifier'], keep, inplace)**
+
   
 
 
