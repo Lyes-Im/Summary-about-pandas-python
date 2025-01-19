@@ -21,6 +21,9 @@ Les principales méthodes de la classe DataFrame qui vont nous permettre de fair
 - La méthode **describe** d'un DataFrame <ins>retourne un résumé des statistiques descriptives (min, max, moyenne, quantiles,..) de ses variables quantitatives</ins>.
 C'est donc un outil très utile pour une première visualisation du type et de la distribution de ces variables.<br>
 - Pour <ins>analyser les variables catégorielles</ins>, il est préférable de commencer par utiliser la méthode **value_counts** qui renvoie le nombre d'occurrences pour chaque modalité de ces variables. La méthode value_counts ne peut pas s'utiliser directement sur un DataFrame mais que sur les colonnes du DataFrame qui sont des objets de la classe pd.Series.
+## Nettoyage d'un DataSet :<br>
+
+
 
 
 
