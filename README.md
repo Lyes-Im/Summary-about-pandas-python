@@ -27,7 +27,7 @@ C'est donc un outil très utile pour une première visualisation du type et de l
 - <ins>Gestion des doublons</ins> (méthodes **duplicated** et **drop_duplicates**).
 - <ins>Modification des éléments</ins> d'un DataFrame (méthodes **replace**, **rename** et **astype**).
 - <ins>Opérations sur les valeurs</ins> d'un DataFrame (méthode **apply** et clause **lambda**).
-- 
+  
 
 
 
