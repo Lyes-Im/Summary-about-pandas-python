@@ -11,8 +11,10 @@ df = pd.read_csv('filepath_or_buffer' , sep = ',', header = 0, index_col = 0 ...
 Les principales méthodes de la classe DataFrame qui vont nous permettre de faire une rapide analyse de notre jeu de données sont:<br>
 - La fonction **head()** Pour afficher les premières lignes du **DataFrame** par défaut, elle affiche les 5 premières lignes.<br>
 - La fonction **tail()** permet d'afficher les dernières lignes du **DataFrame**.<br>
-- Pour recupérer le nom des colonnes d'un **DataFrame**, on utilise **nom_de_DataFrame.columns**<br>
+- Pour recupérer le nom des colonnes d'un **DataFrame**, on utilise **Objet_DF.columns[..]**<br>
 - Pour afficher les dimensions de notre **DataFrame** on utilise l'attribut **shape**.<br>
+- Pour l'extraction des colonnes d'un **DataFrame**, on utilise **new_DF = df[["col1","col2"]]** <br>
+- Pour extraire une ou plusieurs lignes d'un **DataFrame**, on utilise la fonction **loc[arg]** <br>
 
 
 
