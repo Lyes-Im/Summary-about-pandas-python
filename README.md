@@ -16,7 +16,7 @@ Les principales méthodes de la classe DataFrame qui vont nous permettre de fair
 - Pour <ins>l'extraction des colonnes </ins> d'un **DataFrame**, on utilise **new_DF = df[["col1","col2"]]** <br>
 - Pour extraire <ins>une ou plusieurs lignes </ins> d'un **DataFrame**, on utilise la fonction **loc[index]** / **DF.loc[[index1, index2], ['col1', 'col2']]** <br>
 - La méthode **iloc** permet <ins>d'indexer</ins> un **DataFrame**, c'est-à-dire en ne renseignant que les indexes numériques des lignes et colonnes. Ceci permet d'utiliser le slicing sans contraintes (Exemple : **DF.iloc[0:4, 0:3]**)<br>
-- Nous pouvons utiliser **l'indexation conditionnelle** pour extraire <ins>les lignes</ins> d'un Dataframe qui vérifient une condition donnée.
+- Nous pouvons utiliser **l'indexation conditionnelle** pour <ins>extraire les lignes</ins> d'un Dataframe qui vérifient <ins>une condition donnée</ins> et voici la syntaxe : **df.loc[df['col 2'] == 3]**.
 
 
 
