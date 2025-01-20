@@ -37,8 +37,7 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - On peut renommer les colonnes d'un DataFrame grace à la fonction **rename** qui prend en paramètre un **dictionnaire** et la syntaxe : **df = df.rename(dictionnaire, axis = 1)**
 - On peut aussi <ins>modifier le type d'une colonne</ins> à l'aide de la fonction **astype** qui prend en argument un dictionnaire dont les clés sont les noms des colonnes concernées et les valeurs sont les nouveaux types à assigner et la syntaxe :
    ```df['colonne'] = df['colonne'].astype('int')```
-  ```dictionnaire = {'col_1': 'int', 'col_2': 'float'}
-df = df.astype(dictionnaire)```
+  ```dictionnaire = {'col_1': 'int', 'col_2': 'float' } df = df.astype(dictionnaire)```
   
 
 
