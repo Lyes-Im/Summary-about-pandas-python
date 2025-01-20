@@ -36,7 +36,7 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - La méthode **replace** permet de <ins>remplacer une ou plusieurs valeurs d'une colonne</ins> d'un DataFrame et sa syntaxe : **replace(to_replace = [], value=[])**.
 - On peut renommer les colonnes d'un DataFrame grace à la fonction **rename** qui prend en paramètre un **dictionnaire** et la syntaxe : **df = df.rename(dictionnaire, axis = 1)**
 - On peut aussi <ins>modifier le type d'une colonne</ins> à l'aide de la fonction **astype** qui prend en argument un dictionnaire dont les clés sont les noms des colonnes concernées et les valeurs sont les nouveaux types à assigner et la syntaxe :
-   ```df['colonne'] = df['colonne'].astype('int')```
+   ```df['colonne'] = df['colonne'].astype('int')```<br>
   ```dictionnaire = {'col_1': 'int', 'col_2': 'float' } df = df.astype(dictionnaire)```
   
 
