@@ -38,6 +38,8 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - On peut aussi <ins>modifier le type d'une colonne</ins> à l'aide de la fonction **astype** qui prend en argument un dictionnaire dont les clés sont les noms des colonnes concernées et les valeurs sont les nouveaux types à assigner et la syntaxe :<br>
    ```df['colonne'] = df['colonne'].astype('int')```<br>
   ```dictionnaire = {'col_1': 'int', 'col_2': 'float' } df = df.astype(dictionnaire)```
+
+  
   
 
 
