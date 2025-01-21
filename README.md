@@ -14,6 +14,7 @@ Les principales méthodes de la classe DataFrame qui vont nous permettre de fair
 - Pour <ins>recupérer le nom des colonnes</ins> d'un **DataFrame**, on utilise **Objet_DF.columns[..]**<br>
 - Pour afficher <ins>les dimensions</ins> de notre **DataFrame** on utilise l'attribut **shape**.<br>  
 - Pour <ins>l'extraction des colonnes </ins> d'un **DataFrame**, on utilise **new_DF = df[["col1","col2"]]** <br>
+- Pour la <ins>création d'une nouvelle colonne</ins> 'col' avec les valeurs contenue dans une varibale 'var' **DF_name['col'] = var** <br>
 - Pour extraire <ins>une ou plusieurs lignes </ins> d'un **DataFrame**, on utilise la fonction **loc[index]** / **DF.loc[[index1, index2], ['col1', 'col2']]** <br>
 - La méthode **iloc** permet <ins>d'indexer</ins> un **DataFrame**, c'est-à-dire en ne renseignant que les indexes numériques des lignes et colonnes. Ceci permet d'utiliser le slicing sans contraintes (Exemple : **DF.iloc[0:4, 0:3]**)<br>
 - Nous pouvons utiliser **l'indexation conditionnelle** pour <ins>extraire les lignes</ins> d'un Dataframe qui vérifient <ins>une condition donnée</ins> ou <ins>stocker</ins> quelques informations en relation avec cette condition. Voici la syntaxe : **df.loc[df['col 2'] == 3]**.<br>
@@ -32,14 +33,19 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 <ins>La présence de doublons</ins> se vérifie à l'aide de la méthode **duplicated** d'un DataFrame (DF.duplicated()), qui nous dit pour chaque ligne si elle est un doublon (boolean).
 - nous pouvons lui appliquer la méthode **sum** pour <ins>compter le nombre de doublons</ins> : **df.duplicated().sum()**
 - La méthode d'un DataFrame permettant de supprimer les doublons est **drop_duplicates** et sa syntaxe est : **drop_duplicates(subset = ['col_spécifier'], keep, inplace)**
-### 1.2 Modification des éléments d'un DataFrame : 
+### 1.2 Modification (transformations) des éléments d'un DataFrame : 
 - La méthode **replace** permet de <ins>remplacer une ou plusieurs valeurs d'une colonne</ins> d'un DataFrame et sa syntaxe : **replace(to_replace = [], value=[])**.
 - On peut renommer les colonnes d'un DataFrame grace à la fonction **rename** qui prend en paramètre un **dictionnaire** et la syntaxe : **df = df.rename(dictionnaire, axis = 1)**
 - On peut aussi <ins>modifier le type d'une colonne</ins> à l'aide de la fonction **astype** qui prend en argument un dictionnaire dont les clés sont les noms des colonnes concernées et les valeurs sont les nouveaux types à assigner et la syntaxe :<br>
    ```df['colonne'] = df['colonne'].astype('int')```<br>
   ```dictionnaire = {'col_1': 'int', 'col_2': 'float' } df = df.astype(dictionnaire)``` <br>
 - Il est souvent intéressant de <ins>modifier ou agréger les informations des colonnes</ins> d'un **DataFrame** à l'aide d'une **opération** ou **d'une fonction**. Ces opérations peuvent être tout type de fonction qui prend en argument une colonne. <ins>La méthode permettant d'effectuer une opération sur une colonne</ins> est la méthode **apply** d'un DataFrame dont l'en-tête est : ```apply(func, axis)```
-- Pour calculer **la somme** de toutes les **lignes** on utilise ```axis = 0```. Ex : ```df_lines = df.apply(np.sum, axis = 0)``` || ```df_columns = df.apply(np.sum, axis = 1)```
+- Pour calculer **la somme** de toutes les **lignes** on utilise ```axis = 1```. Ex : ```df_lines = df.apply(np.sum, axis = 1)``` || ```df_columns = df.apply(np.sum, axis = 0)```
+- La méthode **apply** est très puissante lorsqu'elle est associée à **une fonction lambda**.
+
+- En Python, le mot clé lambda est utilisé pour définir une fonction anonyme : <ins>une fonction déclarée sans nom</ins>.
+
+- Une fonction lambda peut <ins>prendre n'importe quel nombre d'arguments</ins>, mais ne peut avoir qu'<ins>une seule expression</ins> et voici sa syntaxe :  ```lambda arguments: expression`` .
 
 
 
