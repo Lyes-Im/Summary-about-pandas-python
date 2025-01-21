@@ -38,6 +38,9 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - On peut aussi <ins>modifier le type d'une colonne</ins> à l'aide de la fonction **astype** qui prend en argument un dictionnaire dont les clés sont les noms des colonnes concernées et les valeurs sont les nouveaux types à assigner et la syntaxe :<br>
    ```df['colonne'] = df['colonne'].astype('int')```<br>
   ```dictionnaire = {'col_1': 'int', 'col_2': 'float' } df = df.astype(dictionnaire)```
+  - Il est souvent intéressant de <ins>modifier ou agréger les informations des colonnes</ins> d'un **DataFrame** à l'aide d'une **opération** ou **d'une fonction**. Ces opérations peuvent être tout type de fonction qui prend en argument une colonne. <ins>La méthode permettant d'effectuer une opération sur une colonne</ins> est la méthode **apply** d'un DataFrame dont l'en-tête est : ```apply(func, axis)```
+
+
 
   
   
