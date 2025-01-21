@@ -45,7 +45,11 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - La méthode **apply** est très puissante lorsqu'elle est associée à **une fonction lambda**.
 - En Python, le mot clé lambda est utilisé pour définir une fonction anonyme : <ins>une fonction déclarée sans nom</ins>.
 - Une fonction lambda peut <ins>prendre n'importe quel nombre d'arguments</ins>, mais ne peut avoir qu'<ins>une seule expression</ins> et voici sa syntaxe :  ```lambda arguments: expression```.
-
+# 1. Gestion des valeurs manquantes :<br>
+- Une valeur manquante est soit une <ins>valeur non renseignée</ins> ou <ins>une valeur qui n'existe pas</ins> (**NaN** dans un DataFrame).
+ - On a des méthodes pour **détection** des valeurs manquantes par exemple **isna** et **any**
+ - Pour le **remplacement** de ces valeurs, on utilise la méthode **fillna**.
+ - Pour la **suppression** de ces valeurs, on utilise la méthode **dropna**.
 
 
   
