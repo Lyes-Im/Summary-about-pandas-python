@@ -41,11 +41,10 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
   ```dictionnaire = {'col_1': 'int', 'col_2': 'float' } df = df.astype(dictionnaire)``` <br>
 - Il est souvent intéressant de <ins>modifier ou agréger les informations des colonnes</ins> d'un **DataFrame** à l'aide d'une **opération** ou **d'une fonction**. Ces opérations peuvent être tout type de fonction qui prend en argument une colonne. <ins>La méthode permettant d'effectuer une opération sur une colonne</ins> est la méthode **apply** d'un DataFrame dont l'en-tête est : ```apply(func, axis)```
 - Pour calculer **la somme** de toutes les **lignes** on utilise ```axis = 1```. Ex : ```df_lines = df.apply(np.sum, axis = 1)``` || ```df_columns = df.apply(np.sum, axis = 0)```
+- - ```df['colonne'].apply(func)``` : Appliquer une fonction à chaque valeur d'une colonne.
 - La méthode **apply** est très puissante lorsqu'elle est associée à **une fonction lambda**.
-
 - En Python, le mot clé lambda est utilisé pour définir une fonction anonyme : <ins>une fonction déclarée sans nom</ins>.
-
-- Une fonction lambda peut <ins>prendre n'importe quel nombre d'arguments</ins>, mais ne peut avoir qu'<ins>une seule expression</ins> et voici sa syntaxe :  ```lambda arguments: expression`` .
+- Une fonction lambda peut <ins>prendre n'importe quel nombre d'arguments</ins>, mais ne peut avoir qu'<ins>une seule expression</ins> et voici sa syntaxe :  ```lambda arguments: expression```.
 
 
 
