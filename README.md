@@ -11,8 +11,8 @@ df = pd.read_csv('filepath_or_buffer' , sep = ',', header = 0, index_col = 0 ...
 Les principales méthodes de la classe DataFrame qui vont nous permettre de faire une rapide analyse de notre jeu de données sont:<br>
 - La fonction **head()** Pour afficher les premières lignes du **DataFrame** par défaut, elle affiche les 5 premières lignes.<br>
 - La fonction **tail()** permet d'afficher les dernières lignes du **DataFrame**.<br>
-- Pour <ins>recupérer le nom des colonnes</ins> d'un **DataFrame**, on utilise **Objet_DF.columns[..]**<br>
-- Pour afficher <ins>les dimensions</ins> de notre **DataFrame** on utilise l'attribut **shape**.<br>  
+- Pour afficher <ins>les dimensions</ins> de notre **DataFrame** on utilise l'attribut **shape**.<br>
+- Pour <ins>recupérer le nom des colonnes</ins> d'un **DataFrame**, on utilise **Objet_DF.columns[..]**<br>  
 - Pour <ins>l'extraction des colonnes </ins> d'un **DataFrame**, on utilise **new_DF = df[["col1","col2"]]** <br>
 - Pour la <ins>création d'une nouvelle colonne</ins> 'col' avec les valeurs contenue dans une varibale 'var' **DF_name['col'] = var** <br>
 - Pour extraire <ins>une ou plusieurs lignes </ins> d'un **DataFrame**, on utilise la fonction **loc[index]** / **DF.loc[[index1, index2], ['col1', 'col2']]** <br>
@@ -64,6 +64,8 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
     - Les <ins>conditions</ins> doivent être renseignées **entre parenthèses** pour éliminer l'ambigüité sur l'ordre d'évaluation des conditions.
     - Un exemple de **filtrage** : ```df.loc[(df['annee']==1999) & (df['surface']>60)]```
     - La fonction **len()*** calcule le nombre d'éléments (lignes) dans la Series.
+  ### 2.Unir des DataFrames : fonction concat et méthode merge.
+  
 
      
 
