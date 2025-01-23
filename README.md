@@ -49,8 +49,8 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 **PS : { axis = 0 (colonne), axis = 1 (ligne) }**
 - Une valeur manquante est soit une <ins>valeur non renseignée</ins> ou <ins>une valeur qui n'existe pas</ins> (**NaN** dans un DataFrame).
  - On a des méthodes pour **détection** des valeurs manquantes par exemple **isna (isnull)** et **any**
- - La méthode **isna** ne prend pas des arguments et retourne le meme DataFrame avec des valeur '**true** et **false**'.
- - La méthode **any** avec <ins>son argument axis</ins> permet de déterminer quelles colonnes (axis = 0) ou quelles lignes (axis = 1) <ins>contiennent <ins>au moins</ins> **une valeur manquante**</ins> Ex : ```df.isna().any(axis=0)```.
+   - La méthode **isna** ne prend pas des arguments et retourne le meme DataFrame avec des valeur '**true** et **false**'.
+   - La méthode **any** avec <ins>son argument axis</ins> permet de déterminer quelles colonnes (axis = 0) ou quelles lignes (axis = 1) <ins>contiennent <ins>au moins</ins> **une valeur manquante**</ins> Ex : ```df.isna().any(axis=0)```.
  - La méthode **sum** <ins>compte le nombre de valeurs manquantes</ins> par colonne ou lignes (en spécifiant l'argument axis). Il est possible d'utiliser d'autres méthodes statistiques comme mean, max, argmax.<br>
  - Pour le **remplacement** de ces valeurs, on utilise la méthode **fillna**.
  - Pour la **suppression** de ces valeurs, on utilise la méthode **dropna**.
