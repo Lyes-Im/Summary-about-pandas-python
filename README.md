@@ -53,6 +53,8 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
    - La méthode **any** avec <ins>son argument axis</ins> permet de déterminer quelles colonnes (axis = 0) ou quelles lignes (axis = 1) <ins>contiennent <ins>au moins</ins> **une valeur manquante**</ins> Ex : ```df.isna().any(axis=0)```.
    - La méthode **sum** <ins>compte le nombre de valeurs manquantes</ins> par colonne ou lignes (en spécifiant l'argument axis). Il est possible d'utiliser d'autres méthodes statistiques comme mean, max, argmax.Ex : ```df.isnull().sum(axis=0)```.<br>
  - Pour le **remplacement** de ces valeurs, on utilise la méthode **fillna**.
+   - La méthode **fillna** permet de <ins>remplacer les valeurs manquantes</ins> d'un DataFrame par des valeurs de notre choix.
+ 
  - Pour la **suppression** de ces valeurs, on utilise la méthode **dropna**.
 
 
