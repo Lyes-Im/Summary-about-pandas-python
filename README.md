@@ -45,7 +45,7 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - La méthode **apply** est très puissante lorsqu'elle est associée à **une fonction lambda**.
 - En Python, le mot clé lambda est utilisé pour définir une fonction anonyme : <ins>une fonction déclarée sans nom</ins>.
 - Une fonction lambda peut <ins>prendre n'importe quel nombre d'arguments</ins>, mais ne peut avoir qu'<ins>une seule expression</ins> et voici sa syntaxe :  ```lambda arguments: expression```.
-# 1. Gestion des valeurs manquantes :<br>
+# 2. Gestion des valeurs manquantes :<br>
 **PS : { axis = 0 (colonne), axis = 1 (ligne) }**
 - Une valeur manquante est soit une <ins>valeur non renseignée</ins> ou <ins>une valeur qui n'existe pas</ins> (**NaN** dans un DataFrame).
  - On a des méthodes pour **détection** des valeurs manquantes par exemple **isna (isnull)** et **any**
@@ -56,6 +56,11 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
    - La méthode **fillna** permet de <ins>remplacer les valeurs manquantes</ins> d'un DataFrame par des valeurs de notre choix. (Voir registre)
  
  - Pour la **suppression** de ces valeurs, on utilise la méthode **dropna**. ```dropna(axis, how, subset = ['col1',..])```
+
+  # 3. Data processing :<br>
+  ### 1.Filtrer un DataFrame avec les opérateurs binaires :
+  - Filtrer consiste à sélectionner un sous-ensemble de lignes d'un DataFrame qui vérifient une condition. Le filtrage correspond à ce qu'on appelait jusqu'à maintenant l'indexation conditionnelle, mais le terme "filtrage" est celui qui est le plus utilisé dans la gestion de bases de données.
+  - <ins>Les opérateurs binaire</ins> à utiliser pour **filtrer** sont : '& (et)', '| (ou)', '- (non)' 
      
 
 
