@@ -46,8 +46,12 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
 - En Python, le mot clé lambda est utilisé pour définir une fonction anonyme : <ins>une fonction déclarée sans nom</ins>.
 - Une fonction lambda peut <ins>prendre n'importe quel nombre d'arguments</ins>, mais ne peut avoir qu'<ins>une seule expression</ins> et voici sa syntaxe :  ```lambda arguments: expression```.
 # 1. Gestion des valeurs manquantes :<br>
+**PS : { axis = 0 (colonne), axis = 1 (ligne) }**
 - Une valeur manquante est soit une <ins>valeur non renseignée</ins> ou <ins>une valeur qui n'existe pas</ins> (**NaN** dans un DataFrame).
- - On a des méthodes pour **détection** des valeurs manquantes par exemple **isna** et **any**
+ - On a des méthodes pour **détection** des valeurs manquantes par exemple **isna (isnull)** et **any**
+ - La méthode **isna** ne prend pas des arguments et retourne le meme DataFrame avec des valeur '**true** et **false**'.
+ - La méthode **any** avec <ins>son argument axis</ins> permet de déterminer quelles colonnes (axis = 0) ou quelles lignes (axis = 1) <ins>contiennent <ins>au moins</ins> **une valeur manquante**</ins> Ex : ```df.isna().any(axis=0)```.
+ - La méthode **sum** <ins>compte le nombre de valeurs manquantes</ins> par colonne ou lignes (en spécifiant l'argument axis). Il est possible d'utiliser d'autres méthodes statistiques comme mean, max, argmax.<br>
  - Pour le **remplacement** de ces valeurs, on utilise la méthode **fillna**.
  - Pour la **suppression** de ces valeurs, on utilise la méthode **dropna**.
 
