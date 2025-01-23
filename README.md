@@ -60,7 +60,11 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
   # 3. Data processing :<br>
   ### 1.Filtrer un DataFrame avec les opérateurs binaires :
   - Filtrer consiste à sélectionner un sous-ensemble de lignes d'un DataFrame qui vérifient une condition. Le filtrage correspond à ce qu'on appelait jusqu'à maintenant l'indexation conditionnelle, mais le terme "filtrage" est celui qui est le plus utilisé dans la gestion de bases de données.
-  - <ins>Les opérateurs binaire</ins> à utiliser pour **filtrer** sont : '& (et)', '| (ou)', '- (non)' 
+    - <ins>Les opérateurs binaire</ins> à utiliser pour **filtrer** sont : '& (et)', '| (ou)' et '- (non)'.
+    - Les <ins>conditions</ins> doivent être renseignées **entre parenthèses** pour éliminer l'ambigüité sur l'ordre d'évaluation des conditions.
+    - Un exemple de **filtrage** : ```df.loc[(df['annee']==1999) & (df['surface']>60)]```
+    - La fonction **len()*** calcule le nombre d'éléments (lignes) dans la Series.
+
      
 
 
