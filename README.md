@@ -71,7 +71,16 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
     - Ceci se fait grâce à la méthode merge de la classe DataFrame dont l'en-tête est la suivante : ```df1.merge(right = df2 , on = 'colonne_commune', how = 'inner') ```
     - <ins>Faire une jointure à gauche, une jointure à droite ou une jointure externe</ins> suivie d'un **dropna(how = 'any')** est équivalent à une jointure interne (inner).
   
-
+  - Il est <ins>possible de re-définir l'index</ins> d'un DataFrame à l'aide de la méthode **set_index** et cette méthode peut prendre en argument :
+    - Le **nom d'une colonne** à utiliser comme indexation et voici un exemple  ```df = df.set_index('Nom')```.
+    - Un **array Numpy ou Series pandas** avec <ins>le même nombre de lignes que le DataFrame appelant la méthode</ins>.
+    - Pour <ins>revenir à l'indexation numérique par défaut</ins>, on utilise la méthode **reset_index** du DataFrame : ```df = df.reset_index()```
+ ### 3.Trier et ordonner les valeurs d'un DataFrame : méthodes sort_values et sort_index
+  - La méthode **sort_values** permet de <ins>trier les lignes d'un DataFrame</ins> selon <ins>les valeurs d'une ou de plusieurs colonnes</ins>.
+    - L'en-tête de cette méthode est la suivante : ```sort_values(by ='permet de préciser sur quelle(s) colonne(s) le tri est effectué', ascending = True/False)```
+    - **ascending = True (Ordre croissant)**: de plus petit au plus grand (1,2,3,4,..)
+    - On prend un exemple : ```df_sorted = df.sort_values(by = ['Points_bonus', 'Note'], ascending = True)```
+    - 
      
 
 
