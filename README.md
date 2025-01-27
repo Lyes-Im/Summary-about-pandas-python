@@ -80,7 +80,19 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
     - L'en-tête de cette méthode est la suivante : ```sort_values(by ='permet de préciser sur quelle(s) colonne(s) le tri est effectué', ascending = True/False)```
     - **ascending = True (Ordre croissant)**: de plus petit au plus grand (1,2,3,4,..)
     - On prend un exemple : ```df_sorted = df.sort_values(by = ['Points_bonus', 'Note'], ascending = True)```
-    - 
+    - Pour la méthode **sort_index** permet de trier un DataFrame selon son index et voici l'exemple : ```df = df.sort_index()```.
+ ### 3.Grouper les éléments d'un DataFrame: méthodes groupby, agg et crosstab
+ - La méthode **groupby** permet de <ins>**grouper les lignes** d'un DataFrame qui **partagent une valeur commune** sur une colonne</ins>.
+   - **Cette méthode ne renvoie pas un DataFrame**
+   - L'objet renvoyé par la méthode **groupby** <ins>est un objet de la classe</ins> **DataFrameGroupBy**.
+   - Cette classe permet de réaliser **des opérations comme le calcul de statistiques (somme, moyenne, maximum, etc...) pour chaque modalité de la colonne sur laquelle on groupe les lignes**.
+   - La structure générale d'une opération groupby est la suivante :
+
+      - Séparation des données (Split).
+      - Application d'une fonction (Apply).
+      - Combinaison des résultats (Combine).
+
+
      
 
 
