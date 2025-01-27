@@ -91,6 +91,8 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
       - Séparation des données (Split).
       - Application d'une fonction (Apply).
       - Combinaison des résultats (Combine).
+   - Toutes **les méthodes statistiques usuelles (count, mean, max, etc...**) peuvent s'utiliser en suffixe de la méthode groupby. Celles-ci s'effectueront uniquement sur les colonnes de type compatibles. Exemple : ```Df.groupby("Colonne de group by")['colonne spécifier pour appliquer means'].mean()```
+   - Il est possible de spécifier pour chaque colonne quelle fonction doit être utilisée à l'étape Application d'une opération groupby. Pour cela, on utilise la méthode **agg** de la classe DataFrameGroupBy en lui renseignant un **dictionnaire où chaque clé est le nom d'une colonne et la valeur est la fonction à appliquer**.  
 
 
      
