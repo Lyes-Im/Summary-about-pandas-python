@@ -64,7 +64,12 @@ Quand nous découvrons un jeu de données il est <ins>très important de vérifi
     - Les <ins>conditions</ins> doivent être renseignées **entre parenthèses** pour éliminer l'ambigüité sur l'ordre d'évaluation des conditions.
     - Un exemple de **filtrage** : ```df.loc[(df['annee']==1999) & (df['surface']>60)]```
     - La fonction **len()*** calcule le nombre d'éléments (lignes) dans la Series.
-  ### 2.Unir des DataFrames : fonction concat et méthode merge.
+  ### 2.Unir des DataFrames : fonction concat et méthode merge
+  - La fonction **concat** du module pandas <ins>permet de concaténer plusieurs DataFrames</ins>, c'est-à-dire les juxtaposer horizontalement ou verticalement.
+    - La syntaxe de la fonction **concat**  est : ```df_concat = pd.concat([Liste de DF], axis = 1)```
+  - Deux DataFrames peuvent être **fusionnés** s'ils ont <ins>une colonne en commun</ins>.
+    - Ceci se fait grâce à la méthode merge de la classe DataFrame dont l'en-tête est la suivante : ```df1.merge(right = df2 , on = 'colonne_commune', how = 'inner') ```
+    - <ins>Faire une jointure à gauche, une jointure à droite ou une jointure externe</ins> suivie d'un **dropna(how = 'any')** est équivalent à une jointure interne (inner).
   
 
      
